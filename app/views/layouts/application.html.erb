@@ -4,12 +4,51 @@
     <title>Blog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', 'http://fonts.googleapis.com/css?family=Raleway:400,700' %>
   </head>
 
   <body>
-    <%= yield %>
+    <div id="sidebar">
+      <div id="logo">
+        <%= link_to root_path do %>
+          <%= image_tag "logo.svg" %>
+        <% end %>
+      </div>
+
+      <ul>
+        <li class="category">Web Site</li>
+        <li><%= link_to "Blog", root_path %></li>
+        <li>About</li>
+      </ul>
+
+      <ul>
+        <li class="category">Social</li>
+        <li><a href="https://github.com/nikita-titov">GitHUb</a></li>
+        <li><a href="https://github.com/nikita-titov">GitHUb1</a></li>
+        <li><a href="https://github.com/nikita-titov">GitHUb2</a></li>
+        <li><a href="https://github.com/nikita-titov">GitHUb3</a></li>
+      </ul>
+
+      <p class="sign_in">Admin Login</p>
+    </div>
+
+    <div id="main_content">
+      <div id="header">
+        <p>All Post</p>
+        <div class="buttons">
+          <buttons class="button"><%= link_to "New Post", new_post_path %></buttons>
+          <buttons class="button">Log Out</buttons>
+        </div>
+      </div>
+
+      <% flash.each do |name, msg| %>
+        <%= content_tag(:div, msg, class: "alert") %>
+      <% end %>
+    
+      <%= yield %>
+
+    </div>
   </body>
 </html>
