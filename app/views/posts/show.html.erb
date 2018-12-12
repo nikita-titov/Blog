@@ -5,8 +5,10 @@
 
 	<p class="date">
 	  Создано <%= time_ago_in_words(@post.created_at) %> назад
-	  | <%= link_to 'Изменить', edit_post_path(@post) %>
-	  | <%= link_to 'Удалить', post_path(@post), method: :delete, data: {confirm: 'Вы точно уверены?'} %>
+	  <% if user_signed_in? %>
+	    | <%= link_to 'Изменить', edit_post_path(@post) %>
+	    | <%= link_to 'Удалить', post_path(@post), method: :delete, data: {confirm: 'Вы точно уверены?'} %>
+	  <% end %>
 	</p>
 
 	<p class="body">

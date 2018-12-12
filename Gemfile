@@ -27,6 +27,11 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+
+gem 'devise'
+gem 'rails_admin'
+#gem 'paperclip' # and installed imagemagick, for image attachments
+
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 

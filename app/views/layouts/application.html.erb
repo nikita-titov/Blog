@@ -29,15 +29,22 @@
         <li><a target="_blank" href="https://github.com/nikita-titov">GitHub</a></li>
       </ul>
 
-      <p class="sign_in">Админ вход</p>
+      <% if user_signed_in? %>
+        <p class="sign_in"><%= link_to 'Выйти', destroy_user_session_path, :method => :delete %></p>
+      <% else %>
+        <p class="sign_in"><%= link_to "Войти", admin_path %></p>
+      <% end %>
+
     </div>
 
     <div id="main_content">
       <div id="header">
-        <p>Все посты</p>
+        <p>Блог на каждый день</p>
         <div class="buttons">
-          <buttons class="button"><%= link_to "Новый пост", new_post_path %></buttons>
-          <buttons class="button">Выйти</buttons>
+          <% if user_signed_in? %>
+            <buttons class="button"><%= link_to "Новый пост", new_post_path %></buttons>
+            <buttons class="button"><%= link_to 'Выйти', destroy_user_session_path, :method => :delete %></buttons>
+          <% end %>
         </div>
       </div>
 
