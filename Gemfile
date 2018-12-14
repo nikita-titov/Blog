@@ -30,6 +30,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
 gem 'rails_admin'
+gem 'will_paginate', '~> 3.1.0'
 #gem 'paperclip' # and installed imagemagick, for image attachments
 
 # Use ActiveStorage variant
