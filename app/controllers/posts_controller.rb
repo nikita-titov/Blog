@@ -2,6 +2,9 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, :except => [:index, :show]
 
+  # scope :newwest, -> { order('created_at DESC') }
+  # scope :sport_theme, -> { where(category_id: 1) }
+
   def index
     @posts = Post.all.order('created_at DESC').paginate(page: params[:page], per_page: 4)
   end

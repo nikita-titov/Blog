@@ -25,6 +25,7 @@
 /node_modules
 /yarn-error.log
 
+/public/uploads
 /public/assets
 /public/system
 .byebug_history
