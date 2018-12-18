@@ -1,29 +1,16 @@
-<<<<<<< HEAD
-# README
+<<<<<<< Simple RoR Blog
+# Info
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Test project. Titov Nikita
 
-Things you may want to cover:
+gems:
 
-* Ruby version
+* rails_admin
 
-* System dependencies
+* devise
 
-* Configuration
+* carrierwave
 
-* Database creation
+* will_paginate
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
 =======
-# Blog
-Simple RoR Blog
->>>>>>> e36cab9fd0a19227d33dbe5ae119b77b58da6731

@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   # scope :sport_theme, -> { where(category_id: 1) }
 
   def index
-    @posts = Post.all.order('created_at DESC').paginate(page: params[:page], per_page: 4)
+    @posts = Post.all.order('created_at DESC').paginate(page: params[:page], per_page: 3)
   end
 
   def new
@@ -31,7 +31,7 @@ class PostsController < ApplicationController
 
   def update
 
-    if @post.update(params[:post].permit(:title, :body))
+    if @post.update(params[:post].permit(:title, :body, :post_photo))
       redirect_to @post
     else
       render 'edit'
@@ -46,7 +46,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :body)
+    params.require(:post).permit(:title, :body, :post_photo)
   end
 
   def set_post
