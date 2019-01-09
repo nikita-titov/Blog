@@ -2,9 +2,6 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, :except => [:index, :show]
 
-  # scope :newwest, -> { order('created_at DESC') }
-  # scope :sport_theme, -> { where(category_id: 1) }
-
   def index
     @posts = Post.all.order('created_at DESC').paginate(page: params[:page], per_page: 3)
   end
@@ -30,8 +27,7 @@ class PostsController < ApplicationController
   end
 
   def update
-
-    if @post.update(params[:post].permit(:title, :body, :post_photo))
+    if @post.update(post_params)
       redirect_to @post
     else
       render 'edit'

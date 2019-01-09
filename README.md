@@ -1,4 +1,4 @@
-<<<<<<< Simple RoR Blog
+<<<<<<< RoR Blog
 # Info
 
 Test project. Titov Nikita
@@ -12,5 +12,17 @@ gems:
 * carrierwave
 
 * will_paginate
+
+tests:
+
+* rspec
+
+* factory_bot
+
+* shoulda_matchers
+
+* capybara
+
+* database_cleaner
 
 =======
