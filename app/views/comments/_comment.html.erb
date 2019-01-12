@@ -5,10 +5,9 @@
 		<p class="comment_time"><%= time_ago_in_words(comment.created_at) %> Ago</p>
 	</div>
 	<% if user_signed_in? %>
-	<p><%= link_to "Удалить", [comment.post, comment],
+	<p><%= link_to "Удалить комментарий", [comment.post, comment],
 				   method: :delete,
-				   class: "button",
-				   data: { confirm: "Вы уверены?"} %>	
+				   class: "button" %>	
 	</p>
 	<% end %>
 </div>

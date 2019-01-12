@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe PostsController, type: :controller do
-
+ 
   describe 'GET #create' do
     sign_in_user
     it 'create post' do
@@ -17,7 +17,6 @@ RSpec.describe PostsController, type: :controller do
 
   describe 'GET #show' do
     let(:post) { create(:post) }
-
     it 'render show view' do
       get :show, params: { id: post.id }
       expect(response).to have_http_status(200)
