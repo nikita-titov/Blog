@@ -1,4 +1,4 @@
-<<<<<<< RoR Blog
+<<<<<<< Ruby on Rails Blog with Test`s
 # Info
 
 Test project. Titov Nikita
